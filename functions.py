@@ -7,9 +7,14 @@
 
 # score = 10
 
+import json
 
+def load_data():
+    data = {}
+    with open("scoreboard.json","r") as f:
+        data = json.load(f)
+        print(data)
 
-
-
+load_data()
 # game_start()
 # user_record(score)

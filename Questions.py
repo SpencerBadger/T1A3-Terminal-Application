@@ -3,6 +3,7 @@ from rich.console import Console
 from rich.text import Text
 from rich.table import Table
 from rich import print
+from userclass import *
 
 console = Console()
 table = Table()
@@ -68,20 +69,20 @@ def question_quiz_warcraft():
 
 #    SAVED USERS DETAILS AND SCORE
         console.print("[white]---------------------------------------------------------------------------------------------------------------------------------")
-        yes = console.input("[green] Would you like to save your results? (Y/N)").upper()
-        if yes == "Y":
-            user_record(score)
-        elif yes == "N":       
+        what_next = console.input("[green] Would you like to save your results? (Y/N) ").upper()
+        if what_next == "Y":
+            write_data(score)
+        elif what_next == "N":
             exit()
 
-
-
-def user_record(score):
+def write_data(score):
     first_name = str(input("Please provide your first name: "))
     last_name =str(input("Please provide your last name: "))
-    user_details = {"First Name ":first_name,"Last Name ":last_name,"Score" : score}
-    print(user_details)
-    with open('scoreboard.json','w') as f:
-             json.dump(user_details, f, indent=4)
-        return(None)
+    user_details = UserClass(first_name,last_name,score)
+    user_details.show()
+    user_details.view_highscores()
     
+
+
+    
+
