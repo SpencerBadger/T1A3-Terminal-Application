@@ -1,9 +1,13 @@
-import rich
+"""
+This module contains various data relating to the quiz questions/answers logic for the quiz.
+"""
+import rich, pyfiglet, colorama, os
 from rich.console import Console
 from rich.text import Text
 from rich.table import Table
 from rich import print
 from userclass import *
+
 
 console = Console()
 table = Table()
@@ -29,15 +33,25 @@ def question_quiz_warcraft():
         question_number = 0
         score = 0
         for question in questions:
-            
-            console.print("[white]---------------------------------------------------------------------------------------------------------------------------------")
-            console.print("[green]" + question)
-            console.print("[white]---------------------------------------------------------------------------------------------------------------------------------")
+            os.system('cls' if os.name == 'nt' else 'clear')
+            console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
+            console.print("[green]" + question, justify="center")
+            console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
 
             for answer in multiple_choice[question_number]:
-                
-                print(answer)
-            guesses = input("Please enter the corresponding letter: ").upper()
+                console.print(answer, justify="center")
+    
+            console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
+            try:
+                guesses = input("Please enter the corresponding letter: ").upper() 
+            except KeyboardInterrupt:
+                try:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    exit()
+                except SystemExit:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    os._exit(130)
+
             data_table[0].append(questions[question_number])
             data_table[1].append(long_answer[question_number])
             if guesses == answers[question_number]:
@@ -53,7 +67,8 @@ def question_quiz_warcraft():
             console.print("[white]---------------------------------------------------------------------------------------------------------------------------------")
             
             question_number += 1
-
+        os.system('cls' if os.name == 'nt' else 'clear')
+        console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
         table = Table(title = "Results",show_lines=True)
         table.add_column("Question", justify="left")
         table.add_column("Answer", justify="left")
@@ -65,22 +80,28 @@ def question_quiz_warcraft():
             else:
                  table.add_row(data_table[0][i],data_table[1][i],"[red] Incorrect",":cross_mark:")
         table.add_row("Total Score: ","","",str(score))
-        console.print(table)
-
+        console.print(table,justify="center")
+ 
 #    SAVED USERS DETAILS AND SCORE
-        console.print("[white]---------------------------------------------------------------------------------------------------------------------------------")
-        what_next = console.input("[green] Would you like to save your results? (Y/N) ").upper()
-        if what_next == "Y":
-            write_data(score)
-        elif what_next == "N":
+        console.print("[white]---------------------------------------------------------------------------------------------------------------------------------",justify="center")
+        console.print("[green] Would you like to save your results?",justify="center")
+        what_next = console.input("[green](Y/N):").upper()
+        if what_next == "N":
             exit()
+        elif what_next == "Y":
+            write_data(score)
+        input("Press Enter to continue...")    
+        from main import menu_choice
+        menu_choice()
 
 def write_data(score):
+    os.system('cls' if os.name == 'nt' else 'clear')
     first_name = str(input("Please provide your first name: "))
+    os.system('cls' if os.name == 'nt' else 'clear')
     last_name =str(input("Please provide your last name: "))
     user_details = UserClass(first_name,last_name,score)
     user_details.show()
-    user_details.view_highscores()
+    user_details.save_highscores()
     
 
 
