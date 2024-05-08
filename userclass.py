@@ -25,8 +25,6 @@ class UserClass:
         (print(f"Hi", self.first_name, self.last_name,"congratulations!!! your score is:", self.score))
         """
         This method generates a message when called providing the users 
-        """
-        """
         Parameters
         ----------
         first_name : str
@@ -37,8 +35,9 @@ class UserClass:
     def save_highscores(self):
         with open ('highscores.csv', 'a',newline='') as f:
             write = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
-            write.writerow(["First Name", "Last Name", "Score"])
+            # write.writerow(["First Name", "Last Name", "Score"])
             write.writerow([self.first_name, self.last_name, self.score])
+            
         """
         This method is for when the user saves their data to the scoreboard.
         """        
@@ -53,14 +52,4 @@ class UserClass:
         """
         This method is for when the user wants to see the scoreboard.
         """          
-
-        # except FileNotFoundError:
-        #     print("File not found")
-        # finally:   
-        #     with open ('highscores.csv','a', newline='') as my_file:
-        #         csv_writter = csv.writer(my_file)
-        #         my_data = [[randint(0, 9) for _ in range(10)] for _ in range(10)]
-        #         #for each row append it to our CSV file
-        #         for row in my_data:
-        #         csv_writter.writerow(row)
 

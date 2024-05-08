@@ -21,13 +21,13 @@ def question_quiz_warcraft():
                 "4. Who built Karazhan in World of Warcraft?",
                 "5. What is the draenei racial heal called in World of Warcraft?" )
 
-        multiple_choice = (("A. Ironforge", "B. Elwynn City", "C. Stormwind City", "D. Silvermoon City", "E. Booty Bay"),
-                ("A. Warrior", "B. Warlock", "C. Priest", "D. Hunter","E. Rogue","F. All of the above"),
-                ("A. Scarlet Monastery", "B. Auchindoun", "C. The Stockade", "D. Shadowfang Keep","E. The Deadmines"),
-                ("A. Archimonde","B. Prince Kael'thas Sunstrider", "C. Guardian Aegwynn", "D. Kel'thuzad","E. Arthas Menethil"),
-                ("A. Blessing of Argus", "B. Gift of the Naaru", "C. Symbol of Hope", "D. Velen's Touch","E. Call of the Exodar"))
+        multiple_choice = (("1. Ironforge", "2. Elwynn City", "3. Stormwind City", "4. Silvermoon City", "5. Booty Bay"),
+                ("1. Warrior", "2. Warlock", "3. Priest", "4. Hunter","5. Rogue","6. All of the above"),
+                ("1. Scarlet Monastery", "2. Auchindoun", "3. The Stockade", "4. Shadowfang Keep","5. The Deadmines"),
+                ("1. Archimonde","2. Prince Kael'thas Sunstrider", "3. Guardian Aegwynn", "4. Kel'thuzad","5. Arthas Menethil"),
+                ("1. Blessing of Argus", "2. Gift of the Naaru", "3. Symbol of Hope", "4. Velen's Touch","5. Call of the Exodar"))
         
-        answers = ("C","F","A","C","B")
+        answers = (3,6,1,3,2)
         long_answer =("C. Stormwind City","F. All of the above","A. Scarlet Monastery","C. Guardian Aegwynn","B. Gift of the Naaru")
         guesses = []
         question_number = 0
@@ -45,8 +45,7 @@ def question_quiz_warcraft():
             console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
             
             try:
-                guesses = Prompt.ask("[green] Please enter the corresponding letter: ").upper()
-            except va 
+                guesses = IntPrompt.ask("[green] Please enter the corresponding number: ")
             except KeyboardInterrupt:
                 try:
                     os.system('cls' if os.name == 'nt' else 'clear')
