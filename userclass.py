@@ -38,18 +38,4 @@ class UserClass:
             # write.writerow(["First Name", "Last Name", "Score"])
             write.writerow([self.first_name, self.last_name, self.score])
             
-        """
-        This method is for when the user saves their data to the scoreboard.
-        """        
-
-    def view_highscores(self):
-        with open ('highscores.csv','r') as f:
-                 csvreader = csv.reader(f)
-                 rows = []
-                 for row in csvreader:
-                    rows.append(row)
-                    print(rows)
-        """
-        This method is for when the user wants to see the scoreboard.
-        """          
-
+        'This method is for when the user saves their data to the scoreboard.'   

@@ -76,7 +76,7 @@ def choice_one():
 def choice_two():
     '(Choice Two) This function when invoked will clear the previous screen and then the player will navigate to the View the highscores and the function call will load the scoredboard from csv.'
     os.system('cls' if os.name == 'nt' else 'clear')
-    file_reader()
+    view_highscores()
     try:
         choice = IntPrompt.ask("[green]If you would like to try again press 1 otherwise press 2 to exit: ")
         if (choice == 1):
@@ -86,41 +86,26 @@ def choice_two():
     except ValueError:
         print("Invalid option - Please try again.")
 
-
-
-def file_reader():
-    
-    with open('highscores.csv', 'r') as f:
-        reader = csv.reader(f,delimiter=",")
-        header = next(reader)
-        # modified_header = str(header).replace('[', '').replace(']','')
-        sortedlist = sorted(reader, key=operator.itemgetter(2), reverse=True)
-        my_df = pd.read_csv('highscores.csv')
-        total_rows = my_df.shape[0]
-        users_first_name = {}
-        i = 0
-        for i in range(total_rows):
-            i += 1
-            users_first_name = users_first_name.append(sortedlist[i])
-            print(users_first_name)
-            
-        #     for name in users_first_name:
-        #         name += 1
-        #         users_first_name = users_first_name.append()
-        # users_last_name = sortedlist[1]
-        # users_score = sortedlist[2]
-        # print(type(users_first_name))
-        # print(users_first_name)
-
+def view_highscores():
+        csvData = pd.read_csv("highscores.csv",index_col=False)
+        csvData.sort_values(["Score"],axis=0,ascending=[False],inplace=True)
+        csvData.to_csv("highscores.csv",index=False)
+        csvScore = pd.read_csv("highscores.csv",usecols=["Score"])
+        csvFirstName = pd.read_csv("highscores.csv",usecols=["First Name"])
+        csvLastName = pd.read_csv("highscores.csv",usecols=["Last Name"])
+        csvLines = int(csvData.shape[1])
+        # Creating the scoreboard with Rich library.
         score_table = Table(title="Score Board")
-        score_table.add_column(header[0])
-        score_table.add_column(header[1])
-        score_table.add_column(header[2])
-        
-        for i in range(total_rows):
-            i += 1
-            score_table.add_row()
+        score_table.add_column("First Name")
+        score_table.add_column("Last Name")
+        score_table.add_column("Score")
+        score_table.add_row(csvFirstName.to_string(index=False,header=None),csvLastName.to_string(index=False,header=None),csvScore.to_string(index=False,header=None))
         console.print(score_table, justify="center")
 
 main_quiz()
 'Here I am invoking the main_quiz function to start the quiz.'
+
+
+
+# 'Here I sort the csv rows by the column score'
+# 
