@@ -6,7 +6,7 @@ from Questions import *
 from userclass import *
 from rich.console import Console
 from rich.table import Table
-
+from rich.prompt import IntPrompt
 
 def main_quiz():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -41,54 +41,50 @@ def menu_choice():
     """
     (3) Feature - This function is for the main menu logic tree. Depending on the user choice a further function will be called accordingly.
     """
-
-    choice = int(input("Please input your choice: "))
-    if choice == 1:
-        choice_one()
-    elif choice == 2:
-        choice_two()
-    elif choice == 3:
-        choice_three()
+    try:
+        while True:
+            choice = IntPrompt.ask("[green] Please input your choice ")
+            if (choice == 1):
+                choice_one()
+            elif choice == 2:
+                choice_two()
+            elif (choice == 3):
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("You have chosen to exit the game!")
+                break
+                '(Choice Three) When invoked this function will exit the game.'
+            else:
+                os.system('cls' if os.name == 'nt' else 'clear')
+                quiz_header()
+                quiz_table()
+                console.print(":cross_mark:","[red] INVALID OPTION",":cross_mark:","\n:cross_mark:","[red] PLEASE TRY AGAIN",":cross_mark:" ,style="bold")
+                
+    except KeyboardInterrupt:
+                try:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    exit()
+                except SystemExit:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    exit()
 
 def choice_one():
-    """
-    (Choice One) This function when invoked will clear the previous screen and then the player will navigate to 
-    the main menu of the game and perform a function call on question_quiz_warcraft()
-    """
+    '(Choice One) This function when invoked will clear the previous screen and then the player will navigate to the main menu of the game and perform a function call on question_quiz_warcraft()'
     os.system('cls' if os.name == 'nt' else 'clear')
     question_quiz_warcraft()
-        # os.system('cls' if os.name == 'nt' else 'clear')
-        # print("Please select which quiz you would like to play:")
-        # print("(1) Warcraft ", "(2) Fallout ","(3) Emptiness")
-        # quiz_selection = int(input("Which quiz would you like to play?"))
-        # if quiz_selection == 1:
-            
-        # elif quiz_selection == 2:
-        #     print("Option 2")
-        # elif quiz_selection == 3:
-        #     print("Option 3")
 
 def choice_two():
-    '''
-    (Choice Two) This function when invoked will clear the previous screen and then the player will navigate to 
-    the View the highscores and the function call will load the scoredboard from csv.
-    '''
+    '(Choice Two) This function when invoked will clear the previous screen and then the player will navigate to the View the highscores and the function call will load the scoredboard from csv.'
     os.system('cls' if os.name == 'nt' else 'clear')
     print("You have chosen to view highscores!")
     # insert code to display the highscore board.  
-    escape = input("Would you like to exit the program? (y/n)")
-  
-
-def choice_three():
-    """
-    (Choice Three) When invoked this function will exit the game.
-    """
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("You have chosen to exit the game!")
-    exit()
-
+    try:
+        choice = IntPrompt.ask("[green]If you would like to try again press 1 otherwise press 2 to exit: ")
+        if (choice == 1):
+            main_quiz()
+        elif (choice == 2):
+            exit()
+    except ValueError:
+        print("Invalid option - Please try again.")
 
 main_quiz()
-"""
-Here I am invoking the main_quiz function to start the quiz.
-"""
+'Here I am invoking the main_quiz function to start the quiz.'
