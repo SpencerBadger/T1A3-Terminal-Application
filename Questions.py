@@ -8,6 +8,7 @@ from rich.table import Table
 from rich import print
 from userclass import *
 from rich.prompt import IntPrompt, Prompt
+from os import system, name
 
 console = Console()
 table = Table()
@@ -32,9 +33,9 @@ def question_quiz_warcraft():
         guesses = []
         question_number = 0
         score = 0
-        'Loops for questions'
+        #Loops for questions
         for question in questions:
-            os.system('cls' if os.name == 'nt' else 'clear')
+            clear_screen()
             console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
             console.print("[green]" + question, justify="center")
             console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
@@ -48,10 +49,10 @@ def question_quiz_warcraft():
                 guesses = IntPrompt.ask("[green] Please enter the corresponding number: ")
             except KeyboardInterrupt:
                 try:
-                    os.system('cls' if os.name == 'nt' else 'clear')
+                    clear_screen()
                     exit()
                 except SystemExit:
-                    os.system('cls' if os.name == 'nt' else 'clear')
+                    clear_screen()
                     exit()
             'Error handling for incorrect choices'
             data_table[0].append(questions[question_number])
@@ -70,7 +71,7 @@ def question_quiz_warcraft():
             console.print("[white]---------------------------------------------------------------------------------------------------------------------------------")
             
             question_number += 1
-        os.system('cls' if os.name == 'nt' else 'clear')
+        clear_screen()
         console.print("[white]---------------------------------------------------------------------------------------------------------------------------------", justify="center")
         table = Table(title = "Results",show_lines=True)
         table.add_column("Question", justify="left")
@@ -95,26 +96,31 @@ def question_quiz_warcraft():
                 from main import menu_choice
                 menu_choice() 
             elif(what_next == 2):
-                os.system('cls' if os.name == 'nt' else 'clear')
+                clear_screen()
                 what_next_next = IntPrompt.ask("[green] Press 1: to start again. \n Press 2: to exit.")
                 if (what_next_next == 1):
-                    os.system('cls' if os.name == 'nt' else 'clear')
+                    clear_screen()
                     from main import main_quiz
                     main_quiz()
                 elif(what_next_next == 2):
                     exit()
             else:
                 console.print(":cross_mark:","[red] INVALID OPTION",":cross_mark:","\n:cross_mark:","[red] PLEASE TRY AGAIN",":cross_mark:" ,style="bold")
+                
 def write_data(score):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    clear_screen()
     first_name = str(input("Please provide your first name: "))
-    os.system('cls' if os.name == 'nt' else 'clear')
+    clear_screen()
     last_name =str(input("Please provide your last name: "))
     user_details = UserClass(first_name,last_name,score)
     user_details.show()
     user_details.save_highscores()
     
-
+def clear_screen():
+    if name == 'nt':
+        _= system('cls')
+    else:
+        _= system('clear')
 
     
 

@@ -1,9 +1,9 @@
 """
 This module contains various classes related to a user data for the the quiz scoreboard.
 """
-
-
-import Questions, csv, os
+import Questions
+import csv
+import os
 
 class UserClass:
     """This is the documentation for the __init__ method."""

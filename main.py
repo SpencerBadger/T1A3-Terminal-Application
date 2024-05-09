@@ -1,7 +1,8 @@
 """
 This module contains the main code to execute the quiz.
 """
-import pyfiglet, colorama, os, operator
+import pyfiglet
+import os
 from Questions import *
 from userclass import *
 from rich.console import Console
@@ -10,25 +11,24 @@ from rich.prompt import IntPrompt
 import pandas as pd
 
 def main_quiz():
-    os.system('cls' if os.name == 'nt' else 'clear')
     """
-    Function for the starting of the quiz. This function will call other functions as required.
+    main_quiz() Starts the quiz game.
     """
+    clear_screen()
     quiz_header()
     quiz_table()
     menu_choice()
 
 def quiz_header():
     """
-    (1) Feature - This header being created through use of an external library imported and utilized correctly to display the 'header' for the quiz.
-    This utilizes ASCII art.
+    (1) Feature - quiz_header() Displays the Quiz Header when called. Utilizing ASCII art.
     """
     result = pyfiglet.figlet_format("Quiz",font= 'sub-zero')
     console.print((result),justify="center")
 
 def quiz_table():
     """
-    (2) Feature - This is the generation of a table to display the main menu for the quiz.
+    (2) Feature - quiz_table() Generates and displays the main menu for the quiz.
     """
     table = Table()
     table.add_column("Option (1)", justify="center")
@@ -40,59 +40,71 @@ def quiz_table():
 
 def menu_choice():
     """
-    (3) Feature - This function is for the main menu logic tree. Depending on the user choice a further function will be called accordingly.
+    (3) Feature - menu_choice() Handles the main menu logic tree.
     """
     try:
         while True:
             choice = IntPrompt.ask("[green] Please input your choice ")
             if (choice == 1):
+                """
+                Calls the choice_one function.
+                """
                 choice_one()
             elif choice == 2:
+                """
+                Calls the choice_two function.
+                """
                 choice_two()
             elif (choice == 3):
-                os.system('cls' if os.name == 'nt' else 'clear')
+                clear_screen()
                 print("You have chosen to exit the game!")
-                break
-                '(Choice Three) When invoked this function will exit the game.'
+                exit()
+                """
+                (Choice Three) If invoked this function will exit the game.
+                """
             else:
-                os.system('cls' if os.name == 'nt' else 'clear')
+                clear_screen()
                 quiz_header()
                 quiz_table()
                 console.print(":cross_mark:","[red] INVALID OPTION",":cross_mark:","\n:cross_mark:","[red] PLEASE TRY AGAIN",":cross_mark:" ,style="bold")
                 
     except KeyboardInterrupt:
                 try:
-                    os.system('cls' if os.name == 'nt' else 'clear')
+                    clear_screen()
                     exit()
                 except SystemExit:
-                    os.system('cls' if os.name == 'nt' else 'clear')
+                    clear_screen()
                     exit()
 
 def choice_one():
-    '(Choice One) This function when invoked will clear the previous screen and then the player will navigate to the main menu of the game and perform a function call on question_quiz_warcraft()'
-    os.system('cls' if os.name == 'nt' else 'clear')
+    """
+    (Choice One) choice_one() When invoked will clear the current screen and call the question_quiz_warcraft() function.
+    """
+    clear_screen()
     question_quiz_warcraft()
 
 def choice_two():
-    '(Choice Two) This function when invoked will clear the previous screen and then the player will navigate to the View the highscores and the function call will load the scoredboard from csv.'
-    os.system('cls' if os.name == 'nt' else 'clear')
+    """
+    (Choice Two) choice_two() when will clear the current screen and then the call the view_highscores() function, this will display the scoreboard by invoking the view_highscores() function.
+    """
+    clear_screen()
     view_highscores()
     
 
 def view_highscores():
-        csvData = pd.read_csv("highscores.csv",index_col=False)
-        csvData.sort_values(["Score"],axis=0,ascending=[False],inplace=True)
-        csvData.to_csv("highscores.csv",index=False)
-        csvScore = pd.read_csv("highscores.csv",usecols=["Score"])
-        csvFirstName = pd.read_csv("highscores.csv",usecols=["First Name"])
-        csvLastName = pd.read_csv("highscores.csv",usecols=["Last Name"])
-        csvLines = int(csvData.shape[1])
+        csv_data = pd.read_csv("highscores.csv",index_col=False)
+        csv_data.sort_values(["Score"],axis=0,ascending=[False],inplace=True)
+        csv_data.to_csv("highscores.csv",index=False)
+        csv_score = pd.read_csv("highscores.csv",usecols=["Score"])
+        csv_first_name = pd.read_csv("highscores.csv",usecols=["First Name"])
+        csv_last_name = pd.read_csv("highscores.csv",usecols=["Last Name"])
+        csv_lines = int(csv_data.shape[1])
         # Creating the scoreboard with Rich library.
         score_table = Table(title="Score Board")
         score_table.add_column("First Name", style="cyan")
         score_table.add_column("Last Name")
         score_table.add_column("Score",style="green")
-        score_table.add_row(csvFirstName.to_string(index=False,header=None),csvLastName.to_string(index=False,header=None),csvScore.to_string(index=False,header=None))
+        score_table.add_row(csv_first_name.to_string(index=False,header=None),csv_last_name.to_string(index=False,header=None),csv_score.to_string(index=False,header=None))
         console.print(score_table, justify="center")
         try:
             choice = IntPrompt.ask("[green]If you would like to try again press 1 otherwise press 2 to exit: ")
@@ -102,10 +114,12 @@ def view_highscores():
                 exit()
         except ValueError:
             print("Invalid option - Please try again.")
+        except KeyboardInterrupt:
+                    clear_screen()
+                    exit()
+
+                
 main_quiz()
-'Here I am invoking the main_quiz function to start the quiz.'
-
-
-
-# 'Here I sort the csv rows by the column score'
-# 
+"""
+main_quiz function call to start the game.
+"""
