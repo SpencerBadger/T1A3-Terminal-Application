@@ -89,9 +89,9 @@ def view_highscores():
         csvLines = int(csvData.shape[1])
         # Creating the scoreboard with Rich library.
         score_table = Table(title="Score Board")
-        score_table.add_column("First Name")
+        score_table.add_column("First Name", style="cyan")
         score_table.add_column("Last Name")
-        score_table.add_column("Score")
+        score_table.add_column("Score",style="green")
         score_table.add_row(csvFirstName.to_string(index=False,header=None),csvLastName.to_string(index=False,header=None),csvScore.to_string(index=False,header=None))
         console.print(score_table, justify="center")
         try:
