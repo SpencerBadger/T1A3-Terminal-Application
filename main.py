@@ -77,14 +77,7 @@ def choice_two():
     '(Choice Two) This function when invoked will clear the previous screen and then the player will navigate to the View the highscores and the function call will load the scoredboard from csv.'
     os.system('cls' if os.name == 'nt' else 'clear')
     view_highscores()
-    try:
-        choice = IntPrompt.ask("[green]If you would like to try again press 1 otherwise press 2 to exit: ")
-        if (choice == 1):
-            main_quiz()
-        elif (choice == 2):
-            exit()
-    except ValueError:
-        print("Invalid option - Please try again.")
+    
 
 def view_highscores():
         csvData = pd.read_csv("highscores.csv",index_col=False)
@@ -101,7 +94,14 @@ def view_highscores():
         score_table.add_column("Score")
         score_table.add_row(csvFirstName.to_string(index=False,header=None),csvLastName.to_string(index=False,header=None),csvScore.to_string(index=False,header=None))
         console.print(score_table, justify="center")
-
+        try:
+            choice = IntPrompt.ask("[green]If you would like to try again press 1 otherwise press 2 to exit: ")
+            if (choice == 1):
+                main_quiz()
+            elif (choice == 2):
+                exit()
+        except ValueError:
+            print("Invalid option - Please try again.")
 main_quiz()
 'Here I am invoking the main_quiz function to start the quiz.'
 

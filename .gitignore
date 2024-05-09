@@ -2,3 +2,5 @@
 __pycache__
 .DS_Store
 Requirements.md
+quizclass.py
+warcraft.csv
