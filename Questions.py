@@ -195,7 +195,7 @@ def handle_next_steps(score):
             from main import menu_choice
             menu_choice()
         elif what_next == 2:
-            player_restart()
+                player_restart()
         else:
             console.print(":cross_mark:", "[red] INVALID OPTION", ":cross_mark:", "\n:cross_mark:", "[red] PLEASE TRY AGAIN", ":cross_mark:", style="bold")
 
@@ -238,6 +238,8 @@ def player_restart():
             elif player_restart_or_exit == 2:
                 exit()
             else:
-                raise ValueError("Invalid input. Please enter 1 or 2.")
+                (console.print(":cross_mark:", "[red] INVALID OPTION", ":cross_mark:", "\n:cross_mark:", "[red] PLEASE TRY A 1 OR A 2", ":cross_mark:", style="bold", justify="center"))
+                player_restart()
+                raise AttributeError(player_restart())      
         except ValueError as ve:
             print(ve)
