@@ -20,16 +20,16 @@ then
         #If they selected yes then proceed to check, setup the virtual enviroment and then install dependencies from the requirements.txt
         then
             if [ ! -d "$VENV_NAME" ];
-                echo "Creating virtual environment.">&2
-                python3 -m venv $VENV_NAME
-            then
-                echo "Activating virtual environment.">&2
-                source $VENV_NAME/bin/activate
-                echo "Installing dependencies">&2
-                pip install -r ./requirements.txt
-                echo "Dependencies installed.">&2
-                python3 main.py
-            fi   
+                then
+                    echo "Creating virtual environment.">&2
+                    python3 -m venv $VENV_NAME
+                fi
+            echo "Activating virtual environment.">&2
+            source $VENV_NAME/bin/activate
+            echo "Installing dependencies">&2
+            pip install -r ./requirements.txt
+            echo "Dependencies installed.">&2
+            python3 main.py   
         else
             #If user not happy to install the dependencies they will be notified and advised to run the bash script again when they are.
             echo 'You will need to install the required dependencies before playing.'>&2
