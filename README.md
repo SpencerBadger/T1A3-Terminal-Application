@@ -220,7 +220,7 @@ Functionality:
 
 User Interface:
 
-    - Program interfact should be clear and user friendly
+    - Program interface should be clear and user friendly
     - Program should display questions and optional answers legibly.
     - Program should provide instructions where neccessary
 
@@ -394,10 +394,10 @@ tzdata==2024.1
 
 ## <h2 style="text-align:center" id="Links"> Links</h2>
 Github Repository:
-    <br>- <a href ="https://github.com/SpencerBadger/T1A3-Terminal-Application">T1A3-Terminal-Application</a>
+    <br>- <a href ="https://github.com/SpencerBadger/T1A3-Terminal-Application" target="_blank">T1A3-Terminal-Application</a>
 
 Trello Board:
-    <br>- <a href="https://trello.com/b/itrSmKJq">Terminal Application - T1A3</a>
+    <br>- <a href="https://trello.com/b/itrSmKJq" target="_blank">Terminal Application - T1A3</a>
 
 ## <h2 style="text-align:center" id="credits"> References</h2>
 
