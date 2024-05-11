@@ -30,7 +30,8 @@ def main_quiz():
 
 def quiz_header():
     """
-    (1) Feature - quiz_header() Displays the Quiz Header when called. Utilizing ASCII art.
+    Displays the Quiz Header when called. 
+    Utilizing ASCII art.
 
     Parameters
     ----------
@@ -45,7 +46,7 @@ def quiz_header():
 
 def quiz_table():
     """
-    (2) Feature - quiz_table() Generates and displays the main menu for the quiz.
+    Generates and displays the main menu for the quiz.
 
     Parameters
     ----------
@@ -65,7 +66,9 @@ def quiz_table():
 
 def menu_choice():
     """
-    (3) Feature - menu_choice() Handles the main menu logic tree.
+    Feature 
+    ----------
+    Handles the main menu logic tree.
 
     Parameters
     ----------

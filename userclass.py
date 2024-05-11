@@ -67,6 +67,8 @@ class UserClass:
             write = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
             write.writerow([self.first_name, self.last_name, self.score])
         """
+        FEATURE
+        ----------
         This method saves the users data to the highscores.csv
 
         Parameters
