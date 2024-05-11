@@ -8,7 +8,7 @@
 #Checking if python is installed
 VENV_NAME=".venv"
 
-if [[ -x "$(command -v python)" ]];
+if [[ -x "$(command -v python3)" ]];
 then
     #If python is installed and the version correct.
     pyv="$(python3 -V 2>&1)"

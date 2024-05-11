@@ -5,6 +5,7 @@ import os
 from rich.console import Console
 from userclass import UserClass
 from rich.prompt import IntPrompt
+from rich.prompt import Prompt
 from rich.table import Table
 
 console = Console()
@@ -44,7 +45,7 @@ def question_quiz_warcraft():
 
         #Loops for questions
         for question_number, question in enumerate(questions):
-            os.system('cls' if os.name == 'nt' else 'clear')
+            clear_screen()
             print_question(question, multiple_choice[question_number])
             guesses = get_user_input()
             
@@ -109,6 +110,7 @@ def get_user_input():
     Returns
     ----------
     UserInput
+        This will be the int value that corresponds with the users guess.
     """
     try:
         return IntPrompt.ask("[green] Please enter the corresponding number: ")
@@ -192,8 +194,8 @@ def handle_next_steps(score):
         if what_next == 1:
             write_data(score)
             input("Press Enter to continue...")
-            from main import menu_choice
-            menu_choice()
+            from main import main_quiz
+            main_quiz()
         elif what_next == 2:
                 player_restart()
         else:

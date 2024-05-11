@@ -32,19 +32,17 @@ class UserClass:
     """
     def __init__(self, first_name: str, last_name: str, score: int):
         """
-        This is the documentation for the __init__ method.
         Constructs all the necessary attributes for the person object.
 
         Parameters
         ----------
-            first_name : str
-                first name of the user.
-            last_name : str
-                family name of the user.
-            score : int
-                the user's score
+        first_name : str
+            first name of the user.
+        last_name : str
+            family name of the user.
+        score : int
+            the user's score
         """
-
         self.first_name = first_name
         self.last_name = last_name
         self.score = score
@@ -78,5 +76,4 @@ class UserClass:
         Returns
         ----------
         None
-        """  
-         
+        """ 
