@@ -210,12 +210,36 @@ def get_user_input():
 <br>
 
 ## <h2 style="text-align:center" id="plan">Implementation Plan</h2>
+<h3>Definition of Done</h3>
 
-<h2>EPIC: Feature 1 - menu_choice()</h2>
+Functionality:
+    - Program should be able to present questions to user and accept their answers.
+    - Program should be able to accurately score the quiz based on user input and being correct or incorrect.
+    - Program should be able to display the user score to them upon completing the quiz.
+User Interface:
+    - Program interfact should be clear and user friendly
+    - Program should display questions and optional answers legibly.
+    - Program should provide instructions where neccessary
+Code Quality:
+    - Python code should adhere to PEP8 coding standards
+    - Code should be organized into seperate classes/functions as required.
+    - Program should have appropriate functional error handling
+Quiz Content:
+    - Questions should be unambiguous
+    - Questions should be well-written
+    - Appropriate multiple choice answers provided
+Documentation:
+    - Clear appropriate documention
+    - How to run the program, required dependencies
+Submission:
+    - Assignment submitted in correct format as required by assignment.
+    - Meet any additionally provided requirements
+
+<h3>EPIC: Feature 1 - menu_choice()</h3>
 
 This checklist forms a high level overview of the development steps completed for the creation of this feature.
 
-<h3>Checklist</h3>
+<h4>Checklist</h4>
 
     [x] Project Environment
     [x] Create main script
@@ -227,11 +251,11 @@ This checklist forms a high level overview of the development steps completed fo
     [x] Documentation
 
 
-<h2>EPIC: Feature 2: - save_highscores()</h2>
+<h3>EPIC: Feature 2: - save_highscores()</h3>
 
 This checklist forms a high level overview of the development steps completed for the creation of this feature.
 
-<h3>Checklist</h3>
+<h4>Checklist</h4>
 
     [x] Project Environment
     [x] Create class and attributes
@@ -240,9 +264,9 @@ This checklist forms a high level overview of the development steps completed fo
     [x] Implement screen clearing
     [x] Documentation
 
-<h2>EPIC: Feature 3: - get_user_input()</h2>
+<h3>EPIC: Feature 3: - get_user_input()</h3>
 
-<h3>Checklist</h3>
+<h4>Checklist</h4>
 
 This checklist forms a high level overview of the development steps completed for the creation of this feature.
 
@@ -254,12 +278,23 @@ This checklist forms a high level overview of the development steps completed fo
     [x] Integrate the 'prompt' utility
     [x] Implement error handling
     [x] Documentation
+
+
 <h2 style="text-align:center">Trello Board</h2>
-On my Trello board which I have used for the project management of the three features implementation. I am following the following conventions:
+On my Trello board which I have used for the project management of the three features implementation. 
+
+Conventions Used:
 
 - Each feature is an Epic identified by the labels provided to the user stories.
 - Within each Epic each story is prioritized according to requirements of the feature
-<h2 style="text-align:center">Trello Board Link</h2>
+- A fourth label epic for cross-stories over the features.
+- Columns for:
+    - Backlog
+    - To-Do
+    - Blockers
+    - Done
+
+<h3 style="text-align:center">Trello Board Link</h3>
 <a href="https://trello.com/b/itrSmKJq">Terminal Application - T1A3</a>
 
 <h2 style="text-align:center">Trello Board - Screenshots</h2>
@@ -286,7 +321,7 @@ Github Repository:
     <br>- <a href ="https://github.com/SpencerBadger/T1A3-Terminal-Application">T1A3-Terminal-Application</a>
 
 Trello Board:
-#insert link
+    <br>- <a href="https://trello.com/b/itrSmKJq">Terminal Application - T1A3</a>
 
 ## <h2 style="text-align:center" id="credits"> References</h2>
 
