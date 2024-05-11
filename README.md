@@ -311,20 +311,85 @@ Conventions Used:
 <h2 style="text-align:center">Trello Board - Screenshots</h2>
 
 ## <h2 style="text-align:center" id="installation">Installation</h2> 
-Steps to run.
-- steps to install the application
-- any dependencies required by the application to operate
-- how to use any command line arguments made for the application
 
+<h3>Installation Steps</h3>
+
+(1) Clone the github repository:
+
+Open your terminal or command prompt
+navigate to the directory on your device where you want to clone the repository
+use the following command to clone the repository
+
+```bash
+git clone https://github.com/SpencerBadger/T1A3-Terminal-Application.git
+```
+(2) Navigate to the repository directory:
+
+Once the cloning is complete use the `cd` command to navigate into the repository
+
+```bash
+cd T1A3-Terminal-Application
+```
+(3) Execute the shell script:
+
+Check if the `run_script.sh` file correclty exists in the repository using the `ls` command
+
+```bash
+ls
+```
+If you see the `run_script.sh` file you can execute it using the following command:
+
+```bash
+bash run_script.sh
+```
+or 
+```bash
+./run_script.sh
+```
+(4) Complete Installation Steps:
+
+The `run_script.sh` will check if your system has `python3` installed.
+
+If it is installed it will prompt advise that to play the quiz you will need to install all required dependencies.
+
+Upon enterering `y` a `python` virtual environment will be started and/or installed. Following which the dependencies will be installed into that virtual environment.
+
+```python
+astunparse==1.6.3
+chardet==5.2.0
+colorama==0.4.6
+exceptiongroup==1.2.1
+iniconfig==2.0.0
+Jinja2==3.1.4
+markdown-it-py==3.0.0
+MarkupSafe==2.1.5
+mdurl==0.1.2
+numpy==1.26.4
+packaging==24.0
+pandas==2.2.2
+pdoc==14.4.0
+pluggy==1.5.0
+pyfiglet==0.7.5
+Pygments==2.17.2
+python-dateutil==2.9.0.post0
+pytz==2024.1
+rich==13.7.1
+six==1.16.0
+tomli==2.0.1
+tzdata==2024.1
+```
+(5) Play the game and have fun.
 
 <h2>System/Hardware Requirements</h2>
 
 <h3>System Requirements</h3>
-- Operating System (OS)that supports Python 3.0 or higher. (MacOS, Linux, Windows)
+
+    - Operating System (OS)that supports Python 3.0 or higher. (MacOS, Linux, Windows)
 
 <h3>Hardware Requirements</h3>
-- 70 MB of free disk space
-- 512 MB of RAM
+
+    - 70 MB of free disk space
+    - 512 MB of RAM
 
 
 ## <h2 style="text-align:center" id="Links"> Links</h2>
