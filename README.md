@@ -163,19 +163,16 @@ Trello Link
 
 EPIC: Feature 1 - menu_choice()
 
-![alt text](image.png)
 
 5 points checklist
 
 EPIC: Feature 2:
 
-![alt text](image-1.png)
 
 5 points checklist
 
 EPIC: Feature 3:
 
-![alt text](image-2.png)
 
 5 points checklist
 
