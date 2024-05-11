@@ -115,6 +115,7 @@ def get_user_input():
     try:
         return IntPrompt.ask("[green] Please enter the corresponding number: ")
     except KeyboardInterrupt:
+        clear_screen()
         exit()
     except Exception:
         console.print(":cross_mark:","[red] INVALID OPTION",":cross_mark:","\n:cross_mark:","[red] PLEASE TRY AGAIN",":cross_mark:" ,style="bold")

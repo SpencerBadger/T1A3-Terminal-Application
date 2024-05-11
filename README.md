@@ -78,8 +78,8 @@ Based on the users input:
 - 'Anything else' will clear the screen and print a message indicating an invalid input and will loop through by continuing to display the ```quiz_header()``` and ```quiz_table()``` functions until the user has provided a valid input.
 
 There is a ```KeyboardInterrupt``` event to catch exit errors and then gracefully exit the program.
-
-<h4 style="text-align:center">Code Snippet - Menu Selection</h4>
+<details>
+<summary><h4 style="text-align:center">Code Snippet - Menu Selection</h4></summary>
 
 ```python
 def menu_choice():
@@ -120,8 +120,10 @@ def menu_choice():
                 clear_screen()
                 exit()
 ```
-<br>
-<br>
+
+</details>
+<br/>
+
 <h3 style="text-align:center">Feature 2: Scoring System</h3>
 <h4 style="text-align:center">Description</h4>
 
@@ -140,8 +142,8 @@ The ```writerow``` method is then called in the ```csv.writer``` object to write
 - ```self.score```
 
 The use of the ```with``` statement means that upon writing this data to the csv file it will then be properly closed , even in the event of an exception.
-
-<h4 style="text-align:center">Code Snippet - Scoring System</h4>
+<details>
+<summary><h4 style="text-align:center">Code Snippet - Scoring System</h4></summary>
 
 ```python
 def save_highscores(self):
@@ -162,8 +164,11 @@ def save_highscores(self):
         None
         """ 
 ```
-<br>
-<br>
+
+</details>
+
+<br/>
+
 
 <h3 style="text-align:center">Feature 3: User Input</h3>
 <h4 style="text-align:center">Description</h4>
@@ -182,8 +187,8 @@ This is an imperative and reusable piece of code as its proved to be robust to b
  If there is any other exception it will be caught within '''try''' block by the ```except Exception:```
  An error message will be display to indicate that the input was invalid. 
  On valid entry the screen will then be cleared and the function will return the integer value stored in the ```get_user_input()``` function.
-
-<h4 style="text-align:center">Code Snippet - User Input</h4>
+<details>
+<summary><h4 style="text-align:center">Code Snippet - User Input</h4></summary>
 
 ```python
 def get_user_input():
@@ -207,7 +212,11 @@ def get_user_input():
         clear_screen()
         return get_user_input()
 ```
-<br>
+
+</details>
+
+<br/>
+
 
 ## <h2 style="text-align:center" id="plan">Implementation Plan</h2>
 <h3>Definition of Done</h3>
