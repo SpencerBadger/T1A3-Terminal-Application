@@ -209,49 +209,60 @@ def get_user_input():
 ```
 <br>
 
-## <h2 style="text-align:center" id="plan">Implementation Plan</h2>p
-Trello Screenshot
-
-Trello Link
+## <h2 style="text-align:center" id="plan">Implementation Plan</h2>
 
 <h2>EPIC: Feature 1 - menu_choice()</h2>
 
-<h3>Checklist</h3>
-
-------
-
-- [x] 
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
-- [x] 
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
-
-
-
-<h2>EPIC: Feature 2: -save_highscores</h2>
+This checklist forms a high level overview of the development steps completed for the creation of this feature.
 
 <h3>Checklist</h3>
 
-------
+    [x] Project Environment
+    [x] Create main script
+    [x] Implement menu display
+    [x] Implement choice functionality
+    [x] Implement error handling
+    [x] Implement screen clearing
+    [x] Enhance the user interface
+    [x] Documentation
 
-- [x] 
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
-- [x] 
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
 
-<h2>EPIC: Feature 3: - get_user_input</h2>
+<h2>EPIC: Feature 2: - save_highscores()</h2>
+
+This checklist forms a high level overview of the development steps completed for the creation of this feature.
 
 <h3>Checklist</h3>
-----------------------------------------------------------------
-- [x] 
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
-- [x] 
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+
+    [x] Project Environment
+    [x] Create class and attributes
+    [x] Immplement csv handling function
+    [x] Implement save_highscores() method
+    [x] Implement screen clearing
+    [x] Documentation
+
+<h2>EPIC: Feature 3: - get_user_input()</h2>
+
+<h3>Checklist</h3>
+
+This checklist forms a high level overview of the development steps completed for the creation of this feature.
+
+<h3>Checklist</h3>
+
+    [x] Project Environment
+    [x] Create the function
+    [x] Research the rich library and implementation
+    [x] Integrate the 'prompt' utility
+    [x] Implement error handling
+    [x] Documentation
+<h2 style="text-align:center">Trello Board</h2>
+On my Trello board which I have used for the project management of the three features implementation. I am following the following conventions:
+
+- Each feature is an Epic identified by the labels provided to the user stories.
+- Within each Epic each story is prioritized according to requirements of the feature
+<h2 style="text-align:center">Trello Board Link</h2>
+<a href="https://trello.com/b/itrSmKJq">Terminal Application - T1A3</a>
+
+<h2 style="text-align:center">Trello Board - Screenshots</h2>
 
 ## <h2 style="text-align:center" id="installation">Installation</h2> 
 Steps to run.
