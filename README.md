@@ -213,25 +213,36 @@ def get_user_input():
 <h3>Definition of Done</h3>
 
 Functionality:
+
     - Program should be able to present questions to user and accept their answers.
     - Program should be able to accurately score the quiz based on user input and being correct or incorrect.
     - Program should be able to display the user score to them upon completing the quiz.
+
 User Interface:
+
     - Program interfact should be clear and user friendly
     - Program should display questions and optional answers legibly.
     - Program should provide instructions where neccessary
+
 Code Quality:
+
     - Python code should adhere to PEP8 coding standards
     - Code should be organized into seperate classes/functions as required.
     - Program should have appropriate functional error handling
+
 Quiz Content:
+
     - Questions should be unambiguous
     - Questions should be well-written
     - Appropriate multiple choice answers provided
+
 Documentation:
+
     - Clear appropriate documention
     - How to run the program, required dependencies
+
 Submission:
+
     - Assignment submitted in correct format as required by assignment.
     - Meet any additionally provided requirements
 
