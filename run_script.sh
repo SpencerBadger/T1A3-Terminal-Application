@@ -5,9 +5,11 @@
 #       Change History:                                                         #
 #       09/05/24 Spencer Badger -   Original Code.Bash Created.                 #
 #################################################################################
-#Checking if python is installed
+
+
 VENV_NAME=".venv"
 
+#Checking if python is installed
 if [[ -x "$(command -v python3)" ]];
 then
     #If python is installed and the version correct.
