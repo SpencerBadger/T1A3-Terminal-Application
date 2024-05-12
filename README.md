@@ -173,8 +173,8 @@ def save_highscores(self):
 
 <br/>
 
-
-<h3 style="text-align:center">Feature 3: User Input</h3>
+<details>
+<summary><h3 style="text-align:center">Feature 3: User Input</h3></summary>
 <h4 style="text-align:center">Description</h4>
 
 This feature is a function nameed ```get_user_input()``` this is a prompt function, the purpose of which is to prompt the user to enter a valid input integer value.
@@ -191,6 +191,7 @@ This is an imperative and reusable piece of code as its proved to be robust to b
  If there is any other exception it will be caught within '''try''' block by the ```except Exception:```
  An error message will be display to indicate that the input was invalid. 
  On valid entry the screen will then be cleared and the function will return the integer value stored in the ```get_user_input()``` function.
+ </details>
 <details>
 <summary><h4 style="text-align:center">Code Snippet - User Input</h4></summary>
 
