@@ -25,8 +25,8 @@ Application Mandatory Requirements:
 
 ## <h2 style="text-align:center" id="codeGuide">Code Styling Guide</h2>
 My terminal application adheres to the PEP 8 Code Styling Guide which contributes to it's readability, maintainability and it's functionality.
-
-<b>Here are 10 ways my project adheres to the PEP 8 Code Styling Guide:</b>
+<details>
+<summary><b>Here are 10 ways my project adheres to the PEP 8 Code Styling Guide:</b></summary>
 
 1. Indentation: 
     - Ise of 4 spaces for indentation
@@ -48,10 +48,11 @@ My terminal application adheres to the PEP 8 Code Styling Guide which contribute
     - Graceful error handling for exceptions e.g. KeyboardInterrupt.
 10. Module Organization: 
     - Promoting modularity and maintainability by having code organized into different functionalities within separate modules.
+</details>
 
 ## <h2 style="text-align:center" id="features">Features</h2>
-
-<h3 style="text-align:center">Feature 1: Main Menu</h3>
+<details>
+<summary><h3 style="text-align:center">Feature 1: Main Menu</h3></summary>
 <h4 style="text-align:center">Description</h4>
 
 This is the main menu feature for ```menu_choice()``` it is the main entry point for the menu system.
@@ -78,6 +79,7 @@ Based on the users input:
 - 'Anything else' will clear the screen and print a message indicating an invalid input and will loop through by continuing to display the ```quiz_header()``` and ```quiz_table()``` functions until the user has provided a valid input.
 
 There is a ```KeyboardInterrupt``` event to catch exit errors and then gracefully exit the program.
+</details>
 <details>
 <summary><h4 style="text-align:center">Code Snippet - Menu Selection</h4></summary>
 
@@ -123,8 +125,8 @@ def menu_choice():
 
 </details>
 <br/>
-
-<h3 style="text-align:center">Feature 2: Scoring System</h3>
+<details>
+<summary><h3 style="text-align:center">Feature 2: Scoring System</h3></summary>
 <h4 style="text-align:center">Description</h4>
 
 This feature is a method within my ```class UserClass``` the purpose of this method ```save_highscores(self)``` is to take the users input at the end of the quiz and parse it into a ```highscores.csv``` CSV file.
@@ -142,6 +144,8 @@ The ```writerow``` method is then called in the ```csv.writer``` object to write
 - ```self.score```
 
 The use of the ```with``` statement means that upon writing this data to the csv file it will then be properly closed , even in the event of an exception.
+
+</details>
 <details>
 <summary><h4 style="text-align:center">Code Snippet - Scoring System</h4></summary>
 
@@ -220,44 +224,50 @@ def get_user_input():
 
 ## <h2 style="text-align:center" id="plan">Implementation Plan</h2>
 <h3>Definition of Done</h3>
-
-Functionality:
+<details>
+<summary>Functionality:</summary>
 
     - Program should be able to present questions to user and accept their answers.
     - Program should be able to accurately score the quiz based on user input and being correct or incorrect.
     - Program should be able to display the user score to them upon completing the quiz.
-
-User Interface:
+</details>
+<details>
+<summary>User Interface:</summary>
 
     - Program interface should be clear and user friendly
     - Program should display questions and optional answers legibly.
     - Program should provide instructions where neccessary
-
-Code Quality:
+</details>
+<details>
+<summary>Code Quality:</summary>
 
     - Python code should adhere to PEP8 coding standards
     - Code should be organized into seperate classes/functions as required.
     - Program should have appropriate functional error handling
-
-Quiz Content:
+</details>
+<details>
+<summary>Quiz Content:</summary>
 
     - Questions should be unambiguous
     - Questions should be well-written
     - Appropriate multiple choice answers provided
-
-Documentation:
+</details>
+<details>
+<summary>Documentation:</summary>
 
     - Clear appropriate documention
     - How to run the program, required dependencies
-
-Submission:
+</details>
+<details>
+<summary>Submission:</summary>
 
     - Assignment submitted in correct format as required by assignment.
     - Meet any additionally provided requirements
+</details>
+<details>
+<summary><h3>EPIC: Feature 1 - menu_choice()</h3></summary>
 
-<h3>EPIC: Feature 1 - menu_choice()</h3>
-
-This checklist forms a high level overview of the development steps completed for the creation of this feature.
+A high level overview of the development steps completed for the creation of this feature.
 
 <h4>Checklist</h4>
 
@@ -269,11 +279,11 @@ This checklist forms a high level overview of the development steps completed fo
     [x] Implement screen clearing
     [x] Enhance the user interface
     [x] Documentation
+</details>
+<details>
+<summary><h3>EPIC: Feature 2: - save_highscores()</h3></summary>
 
-
-<h3>EPIC: Feature 2: - save_highscores()</h3>
-
-This checklist forms a high level overview of the development steps completed for the creation of this feature.
+A high level overview of the development steps completed for the creation of this feature.
 
 <h4>Checklist</h4>
 
@@ -283,14 +293,13 @@ This checklist forms a high level overview of the development steps completed fo
     [x] Implement save_highscores() method
     [x] Implement screen clearing
     [x] Documentation
-
-<h3>EPIC: Feature 3: - get_user_input()</h3>
+</details>
+<details>
+<summary><h3>EPIC: Feature 3: - get_user_input()</h3></summary>
 
 <h4>Checklist</h4>
 
-This checklist forms a high level overview of the development steps completed for the creation of this feature.
-
-<h3>Checklist</h3>
+A high level overview of the development steps completed for the creation of this feature.
 
     [x] Project Environment
     [x] Create the function
@@ -298,7 +307,7 @@ This checklist forms a high level overview of the development steps completed fo
     [x] Integrate the 'prompt' utility
     [x] Implement error handling
     [x] Documentation
-
+</details>
 
 <h2 style="text-align:center">Trello Board</h2>
 On my Trello board which I have used for the project management of the three features implementation. 
@@ -320,8 +329,8 @@ Conventions Used:
 <h2 style="text-align:center">Trello Board - Screenshots</h2>
 
 ## <h2 style="text-align:center" id="installation">Installation</h2> 
-
-<h3>Installation Steps</h3>
+<details>
+<summary><h3>Installation Steps</h3></summary>
 
 (1) Clone the github repository:
 
@@ -329,30 +338,30 @@ Open your terminal or command prompt
 navigate to the directory on your device where you want to clone the repository
 use the following command to clone the repository
 
-```bash
+```sh
 git clone https://github.com/SpencerBadger/T1A3-Terminal-Application.git
 ```
 (2) Navigate to the repository directory:
 
 Once the cloning is complete use the `cd` command to navigate into the repository
 
-```bash
+```sh
 cd T1A3-Terminal-Application
 ```
 (3) Execute the shell script:
 
 Check if the `run_script.sh` file correclty exists in the repository using the `ls` command
 
-```bash
+```sh
 ls
 ```
 If you see the `run_script.sh` file you can execute it using the following command:
 
-```bash
+```sh
 bash run_script.sh
 ```
 or 
-```bash
+```sh
 ./run_script.sh
 ```
 (4) Complete Installation Steps:
@@ -362,6 +371,13 @@ The `run_script.sh` will check if your system has `python3` installed.
 If it is installed it will prompt advise that to play the quiz you will need to install all required dependencies.
 
 Upon enterering `y` a `python` virtual environment will be started and/or installed. Following which the dependencies will be installed into that virtual environment.
+
+(5) Play the game and have fun.
+
+</details>
+
+<details>
+<summary><h3>Dependencies</h3></summary>
 
 ```python
 astunparse==1.6.3
@@ -387,32 +403,41 @@ six==1.16.0
 tomli==2.0.1
 tzdata==2024.1
 ```
-(5) Play the game and have fun.
+</details>
+
+
 
 <h2>System/Hardware Requirements</h2>
 
-<h3>System Requirements</h3>
+
+<details>
+<summary><h3>System Requirements</h3></summary>
 
     - Operating System (OS)that supports Python 3.0 or higher. (MacOS, Linux, Windows)
+</details>
 
-<h3>Hardware Requirements</h3>
+<details>
+<summary><h3>Hardware Requirements</h3></summary>
 
     - 70 MB of free disk space
     - 512 MB of RAM
-
+</details>
+</details>
 
 ## <h2 style="text-align:center" id="Links"> Links</h2>
+
 Github Repository:
     <br>- <a href ="https://github.com/SpencerBadger/T1A3-Terminal-Application" target="_blank">T1A3-Terminal-Application</a>
 
 Trello Board:
     <br>- <a href="https://trello.com/b/itrSmKJq" target="_blank">Terminal Application - T1A3</a>
 
+
 ## <h2 style="text-align:center" id="credits"> References</h2>
 
 Selatha (2024) The (almost) ultimate wow quiz, ProProfs. Available at: <a href="https://www.proprofs.com/quiz-school/story.php?title=almost-ultimate-wow-quiz">Ultimate Wow Quiz</a> (Accessed: 02 May 2024). 
 
-van Rossum, G., Warsaw, B., & Coghlan, A. (2001, July 5). PEP 8 – style guide for python code. Python Enhancement Proposals (PEPs). <a href="https://peps.python.org/pep-0008/">PEP 8 - STyle Guide</a> 
+van Rossum, G., Warsaw, B., & Coghlan, A. (2001, July 5). PEP 8 – style guide for python code. Python Enhancement Proposals (PEPs). <a href="https://peps.python.org/pep-0008/">PEP 8 - STyle Guide</a> (Accessed: 02 May 2024)
 
 ## <h2 style="text-align:center">License</h2>
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
