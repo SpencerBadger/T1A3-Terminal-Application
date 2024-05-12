@@ -1,6 +1,6 @@
 <h1 style="text-align:center">T1A3 - Python Terminal Application - Quiz</h1>
 
-<h2 style="text-align:center"> Table of Contents </h2>
+<h2 style="text-align:center">Table of Contents</h2>
 
 - [Purpose](#purpose)
 - [Code Styling Guide](#codeGuide)
@@ -327,7 +327,114 @@ Conventions Used:
 <h3 style="text-align:center">Trello Board Link</h3>
 <a href="https://trello.com/b/itrSmKJq">Terminal Application - T1A3</a>
 
-<h2 style="text-align:center">Trello Board - Screenshots</h2>
+<h2 style="text-align:center">Epics and User Stories | Deadlines and Duartions</h2>
+
+<details>
+<summary><h3>DAY 1 - 3 | 03 May 24 - 05 May 24</h3></summary>
+<details>
+<summary>EPIC: Cross Feature Stories | As a developer I want to document the program and refractor the code for clarity and adherence to the PEP8 code style so that there is appropriate code quality and readability.</summary>
+    Acceptance Criteria:
+        PEP8 Standards Met
+        DRY standards met
+        Docstrings Correctly met.
+</details>
+
+<details>
+<summary>EPIC: Cross Feature Stories | As a developer I want to implement error handling to handle invalid input gracefully, so that the program doesn't crash and the user has a seamless experience.</summary>
+    Acceptance Criteria:
+        Program handles invalid input
+        Provides appropriate feedback
+</details>
+<details>
+<summary>EPIC: Cross Feature Stories | As a developer I want to setup the correct project directory structure, initilize version control and establish a virtual environment so that I can work with an organized development environment efficiently.</summary>
+    Acceptance Criteria:
+        Folders Correctly Established
+        Repository Established
+        .venv installed and active
+</details>
+
+<details>
+<summary>EPIC: Cross Feature Stories | As a developer perform testing of program so that I can ensure that all features work and meet correct standards.</summary>
+    Acceptance Criteria:
+        Test Repeatedly
+        Test Frequently
+        Correct any issues
+</details>
+</details>
+
+<details>
+<summary><h3>DAY 4 - 6 | 06 May 24 - 08 May 24</h3></summary>
+<details>
+<summary>EPIC: get_user_input() | As a developer I need to create and integrate the prompt utility from rich so that users are able to input valid data.</summary>
+Acceptance Criteria:
+    Correctly coded
+    Correctly integrated code
+    Retrieves user data and allocates it accordingly.
+</details>
+<details>
+<summary>EPIC: menu_choice() | As a developer I want to utilize external libraries to enhance the visual appearance so that it is both appealing and and user-friendly.</summary>
+    Acceptance Criteria:
+        Extensive use of rich
+        Use of pyglet
+</details>
+
+<details>
+<summary>EPIC: save_highscores() | As a developer I want to create a CSV file name "highscores.csv" with appropriate headers being ("First Name", "Last Name", "Score") so that I have a structured format within which to store/save the users scores.</summary>
+    Acceptance Criteria:
+        highscores.csv created
+        Headers created - First Name, Last Name, Score
+</details>
+<details>
+<summary>EPIC: save_highscores() | As a developer I want to integrate the save_highscores method into the game logic so that I can ensure high scores are saved correctly without interruption to the game flow.
+</summary>
+
+    Acceptance Criteria:
+        Call on the method with dummy data.
+        Test to ensure appropriate calls and returns work correctly.
+        Check csv to ensure data is saved correctly.
+</details>
+</details>
+
+<details>
+<summary><h3>DAY 7 - 9 | 09 May 24 - 11 May 24</h3></summary>
+<details>
+<summary>EPIC: save_highscores() | As a developer I want to create and implement a class and method for saving scores so that I can ensure the method works as expected.</sumamry>
+    Acceptance Criteria:
+    Create a class
+    Create a method
+    Test with dummy data
+</details>
+<details>
+<summary>EPIC: save_highscores() | As a developer I want to implement error handling for the file operations and validate the user input before writing to csv so that I can prevent potential issues from arising and ensure appropriate data integrity.</summary>
+    Acceptance Criteria:
+    Error Handling Integrated
+    Tested to ensure data integrity
+</details>
+<details>
+<summary>EPIC: menu_choice() | As a developer I want to be able to see a menu displayed so that a user can choose an option.</summary>
+    Acceptance Criteria:
+        Ability to see a menu
+        Ability to select an option
+</details>
+<details>
+<summary>EPIC: menu_choice() | As a developer I want to create the main script for the menu feature so that I can implement the main logic.</summary>
+    Acceptance Criteria:
+        main.py created and holding the menu selection code.
+</details>
+
+<details>
+<summary>EPIC: menu_choice() | As a developer I want to implement the ability to select different options in the menu so that a user can use the program.</summary>
+    Acceptance Criteria:
+        Able to see different options
+        Able to have user input to select different options.
+</details>
+</details>
+
+
+
+
+
+
 
 ## <h2 style="text-align:center" id="installation">Installation</h2> 
 <details>
